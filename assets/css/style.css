@@ -1,59 +1,246 @@
 /* Reset básico */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Base styles (mobile first) */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
-  line-height: 1.6;
-  padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    font-size: 16px;
 }
 
 /* Cabeçalho e navegação */
 header {
-  background-color: #1e1e2f;
-  padding: 20px 0;
-  margin-bottom: 30px;
+    background-color: #1e1e2f;
+    padding: 15px;
+    margin-bottom: 25px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo or Site Title */
+.site-title {
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+/* Mobile navigation menu */
+.nav-toggle {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.nav-toggle:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    width: 100%;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    display: none; /* Hidden by default on mobile */
+    padding: 10px 0;
+    margin-top: 15px;
+    background-color: rgba(20, 20, 35, 0.95);
+    border-radius: 8px;
+}
+
+nav.active ul {
+    display: flex; /* Show when nav is active */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
 }
 
 nav a:hover {
-  color: #ffcb05;
+    color: #ffcb05;
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+}
+
+/* Link ativo na navegação */
+nav a.active {
+    color: #ffcb05;
+    border-left: 3px solid #ffcb05;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* Conteúdo principal */
 main {
-  max-width: 800px;
-  margin: auto;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 92%;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* Typography for mobile */
+h1 {
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+    color: #1e1e2f;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 18px;
+    color: #444;
+    font-size: 1rem;
 }
 
 /* Rodapé */
 footer {
-  text-align: center;
-  margin: 40px 0 20px;
-  color: #777;
-  font-size: 0.9rem;
+    text-align: center;
+    margin: 35px 0 20px;
+    color: #666;
+    font-size: 0.85rem;
+    padding: 15px;
 }
 
-  
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+    body {
+        padding: 0;
+        font-size: 17px;
+        background-color: #f5f5f7;
+    }
+
+    header {
+        padding: 15px 40px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site-title {
+        margin-bottom: 0;
+        text-align: left;
+        font-size: 1.6rem;
+    }
+
+    .nav-toggle {
+        display: none; /* Hide the toggle on larger screens */
+    }
+
+    nav {
+        width: auto;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        margin-top: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        width: auto;
+        border-radius: 20px;
+    }
+
+    nav a:hover {
+        transform: translateY(-3px);
+    }
+
+    /* Link ativo na navegação */
+    nav a.active {
+        color: #ffcb05;
+        border-left: none;
+        border-bottom: 2px solid #ffcb05;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    main {
+        max-width: 800px;
+        padding: 40px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    footer {
+        margin: 50px 0 30px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        max-width: 900px;
+        padding: 50px;
+    }
+
+    header {
+        padding: 20px 60px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 10px 20px;
+    }
+}
