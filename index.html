@@ -1,31 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amanda's Blog</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">about me</a></li>
-        <li><a href="books.html">books</a></li>
-        <li><a href="categories.html">categories</a></li>
-        <li><a href="contact.html">contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Amanda's Blog</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script src="component/navbar.js" defer></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+    </head>
+    <body>
+        <header>
+            <!-- A navbar será inserida aqui pelo JavaScript -->
+        </header>
 
-  <main>
-    <h1>Welcome to my blog!</h1>
-    <p>Here you will find my favorite reads and, in the future, content about technology and space!</p>
-  </main>
+        <main>
+            <h1>Welcome to my blog!</h1>
+            <p>
+                Here you will find my favorite reads, thoughts on books, and
+                content about technology and space!
+            </p>
 
-  <footer>
-    <p>Made by Amanda Massarioli © - 2025</p>
-  </footer>
-</body>
+            <!-- Hero Section with Latest Review -->
+            <div class="featured-section">
+                <h2 class="section-title">Latest Review</h2>
+                <div class="book-card">
+                    <span class="book-category">Fantasy</span>
+                    <img
+                        src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1586722975i/2767052.jpg"
+                        alt="The Night Circus"
+                        class="book-image"
+                    />
+                    <div class="book-content">
+                        <h3 class="book-title">The Night Circus</h3>
+                        <p class="book-author">By Erin Morgenstern</p>
+                        <div class="book-rating">★★★★★</div>
+                        <p class="book-excerpt">
+                            A magical competition between two illusionists in a
+                            mysterious night circus. The prose is beautiful, and
+                            the world-building is enchanting.
+                        </p>
+                        <a href="pages/books.html" class="read-more"
+                            >Read more</a
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Preview -->
+            <h2 class="section-title">Explore Categories</h2>
+            <div class="filter-tags" style="margin-bottom: 25px">
+                <a href="pages/categories.html" class="filter-tag">Romance</a>
+                <a href="pages/categories.html" class="filter-tag">Fiction</a>
+                <a href="pages/categories.html" class="filter-tag">Fantasy</a>
+                <a href="pages/categories.html" class="filter-tag">Tech</a>
+                <a href="pages/categories.html" class="filter-tag">Space</a>
+                <a href="pages/categories.html" class="filter-tag"
+                    >All Categories →</a
+                >
+            </div>
+
+            <!-- Featured Readings Section -->
+            <h2 class="section-title">Featured Readings</h2>
+            <div class="book-grid">
+                <!-- Book 1 -->
+                <div class="book-card">
+                    <span class="book-category">Sci-Fi</span>
+                    <img
+                        src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653442608i/60710841.jpg"
+                        alt="Project Hail Mary"
+                        class="book-image"
+                    />
+                    <div class="book-content">
+                        <h3 class="book-title">Project Hail Mary</h3>
+                        <p class="book-author">By Andy Weir</p>
+                        <div class="book-rating">★★★★☆</div>
+                        <p class="book-excerpt">
+                            A high-stakes space adventure with fascinating
+                            science concepts.
+                        </p>
+                        <a href="pages/books.html" class="read-more"
+                            >Read more</a
+                        >
+                    </div>
+                </div>
+
+                <!-- Book 2 -->
+                <div class="book-card">
+                    <span class="book-category">Tech</span>
+                    <img
+                        src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1544963815i/34964905.jpg"
+                        alt="AI Superpowers"
+                        class="book-image"
+                    />
+                    <div class="book-content">
+                        <h3 class="book-title">AI Superpowers</h3>
+                        <p class="book-author">By Kai-Fu Lee</p>
+                        <div class="book-rating">★★★★☆</div>
+                        <p class="book-excerpt">
+                            An insightful comparison between AI development in
+                            China and Silicon Valley.
+                        </p>
+                        <a href="pages/books.html" class="read-more"
+                            >Read more</a
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Me Brief -->
+            <div class="featured-section" style="margin-top: 40px">
+                <h2 class="section-title">About Me</h2>
+                <p>
+                    Hi, I'm Amanda! I'm 16 years old and passionate about
+                    reading, technology, and astronomy. I created this blog to
+                    share my book reviews and discoveries about science and
+                    technology.
+                </p>
+                <a href="pages/about.html" class="read-more"
+                    >Learn more about me</a
+                >
+            </div>
+
+            <!-- Subscribe Section -->
+            <div class="subscribe-section">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to get notified when I post new content!</p>
+                <form class="subscribe-form">
+                    <input
+                        type="email"
+                        placeholder="Your email address"
+                        class="subscribe-input"
+                        required
+                    />
+                    <button type="submit" class="subscribe-button">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <div class="social-icons">
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-goodreads"></i
+                ></a>
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-github"></i
+                ></a>
+            </div>
+            <p>Made by Amanda Massarioli © - 2025</p>
+        </footer>
+    </body>
 </html>
