@@ -19,13 +19,49 @@
     </nav>
   </header>
 
-  <main>
-    <h1>Categories</h1>
-    <p>Explore my posts by categories: romance, fiction, fantasy, tech and space.</p>
-  </main>
+  <main class="categories-section">
+    <h1>Book Categories</h1>
+  
+    <div class="filter-buttons">
+      <button class="filter-btn" data-category="all">All</button>
+      <button class="filter-btn" data-category="fiction">Fiction</button>
+      <button class="filter-btn" data-category="nonfiction">Non-fiction</button>
+      <button class="filter-btn" data-category="sci-fi">Sci-Fi</button>
+      <button class="filter-btn" data-category="fantasy">Fantasy</button>
+      <button class="filter-btn" data-category="tech">Tech</button>
+    </div>
+  
+    <div class="book-cards">
+      <div class="book-card" data-category="fiction">
+        <h3>The Book Thief</h3>
+        <p>Fiction</p>
+      </div>
+  
+      <div class="book-card" data-category="sci-fi">
+        <h3>The Martian</h3>
+        <p>Sci-Fi</p>
+      </div>
+  
+      <div class="book-card" data-category="tech">
+        <h3>Clean Code</h3>
+        <p>Tech</p>
+      </div>
+  
+      <div class="book-card" data-category="fantasy">
+        <h3>Harry Potter</h3>
+        <p>Fantasy</p>
+      </div>
+  
+      <div class="book-card" data-category="nonfiction">
+        <h3>Sapiens</h3>
+        <p>Non-fiction</p>
+      </div>
+    </div>
+  </main>  
 
   <footer>
-    <p>Made by Amanda Massarioli © - 2025</p>
+    <p>Made by Amanda Marinho Massarioli © - 2025</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
