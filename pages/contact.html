@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact | Amanda's Blog</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <script src="../component/navbar.js" defer></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <style>
+            .contact-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-top: 30px;
+            }
+
+            .contact-info {
+                background-color: #1e1e2f;
+                border-radius: 8px;
+                padding: 25px;
+                color: #fff;
+            }
+
+            .contact-item {
+                margin-bottom: 20px;
+                display: flex;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .contact-icon {
+                color: #ffcb05;
+                font-size: 1.5rem;
+                width: 30px;
+                text-align: center;
+            }
+
+            .contact-text h3 {
+                color: #ffcb05;
+                margin-bottom: 5px;
+                font-size: 1.1rem;
+            }
+
+            .contact-text p {
+                color: #fff;
+                margin-bottom: 0;
+                font-size: 0.95rem;
+            }
+
+            .contact-form {
+                background-color: #fff;
+                border-radius: 8px;
+                padding: 25px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+
+            .form-label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 600;
+                color: #1e1e2f;
+            }
+
+            .form-control {
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                font-size: 1rem;
+                transition: all 0.3s;
+            }
+
+            .form-control:focus {
+                outline: none;
+                border-color: #ffcb05;
+                box-shadow: 0 0 0 3px rgba(255, 203, 5, 0.2);
+            }
+
+            textarea.form-control {
+                min-height: 150px;
+                resize: vertical;
+            }
+
+            .submit-btn {
+                background-color: #1e1e2f;
+                color: #fff;
+                border: none;
+                padding: 12px 25px;
+                border-radius: 30px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .submit-btn:hover {
+                background-color: #ffcb05;
+                color: #1e1e2f;
+                transform: translateY(-3px);
+            }
+
+            .social-contact {
+                display: flex;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .social-contact a {
+                color: #fff;
+                font-size: 1.3rem;
+                transition: all 0.3s;
+            }
+
+            .social-contact a:hover {
+                color: #ffcb05;
+                transform: translateY(-3px);
+            }
+
+            .response-time {
+                margin-top: 20px;
+                background-color: rgba(255, 203, 5, 0.1);
+                padding: 15px;
+                border-radius: 8px;
+                border-left: 3px solid #ffcb05;
+            }
+
+            .response-time h3 {
+                color: #1e1e2f;
+                margin-bottom: 10px;
+                font-size: 1.1rem;
+            }
+
+            @media (min-width: 768px) {
+                .contact-container {
+                    grid-template-columns: 1fr 2fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <!-- A navbar será inserida aqui pelo JavaScript -->
+        </header>
+
+        <main>
+            <h1>Contact Me</h1>
+            <p>
+                Have a question about a book recommendation? Want to discuss a
+                book review or suggest a new title? I'd love to hear from you!
+            </p>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>amandamassarioli3@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>LinkedIn</h3>
+                            <p>linkedin.com/in/amandamassarioli</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-goodreads"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Goodreads</h3>
+                            <p>goodreads.com/amandamassarioli</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>São Paulo, Brazil</p>
+                        </div>
+                    </div>
+
+                    <div class="social-contact">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-goodreads"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Send Me a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label"
+                                >Your Name</label
+                            >
+                            <input
+                                type="text"
+                                id="name"
+                                class="form-control"
+                                placeholder="Your name"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label"
+                                >Email Address</label
+                            >
+                            <input
+                                type="email"
+                                id="email"
+                                class="form-control"
+                                placeholder="Your email"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label"
+                                >Subject</label
+                            >
+                            <select id="subject" class="form-control" required>
+                                <option value="" disabled selected>
+                                    Select a subject
+                                </option>
+                                <option value="book-recommendation">
+                                    Book Recommendation
+                                </option>
+                                <option value="review-feedback">
+                                    Review Feedback
+                                </option>
+                                <option value="collaboration">
+                                    Collaboration Request
+                                </option>
+                                <option value="tech-question">
+                                    Technology Question
+                                </option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label"
+                                >Message</label
+                            >
+                            <textarea
+                                id="message"
+                                class="form-control"
+                                placeholder="Write your message here..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            Send Message
+                        </button>
+                    </form>
+
+                    <div class="response-time">
+                        <h3><i class="fas fa-clock"></i> Response Time</h3>
+                        <p>
+                            I usually respond to messages within 48 hours. For
+                            urgent matters, please reach out via LinkedIn.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="social-icons">
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-goodreads"></i
+                ></a>
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-github"></i
+                ></a>
+            </div>
+            <p>Made by Amanda Massarioli © - 2025</p>
+        </footer>
+
+        <script>
+            // Simple form validation and submission handling
+            document
+                .getElementById('contactForm')
+                .addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Get form values
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+
+                    // Here you would typically send the data to a server
+                    // For now, let's just show an alert
+                    alert(
+                        `Thank you, ${name}! Your message has been received. I'll get back to you soon.`
+                    );
+
+                    // Reset the form
+                    this.reset();
+                });
+        </script>
+    </body>
+</html>
