@@ -3,9 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Livros</title>
+        <title>Livros | Amanda's Blog</title>
         <link rel="stylesheet" href="../assets/css/style.css" />
         <script src="../component/navbar.js" defer></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
     </head>
     <body>
         <header>
@@ -18,10 +22,208 @@
                 Here are all my readings so far, and my opinion on each of them.
                 Feel free to leave comments here <3
             </p>
+
+            <!-- Search and filter section -->
+            <div class="search-container">
+                <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search for books, authors, or categories..."
+                />
+                <div class="filter-tags">
+                    <span class="filter-tag active">All</span>
+                    <span class="filter-tag">Romance</span>
+                    <span class="filter-tag">Fiction</span>
+                    <span class="filter-tag">Fantasy</span>
+                    <span class="filter-tag">Tech</span>
+                    <span class="filter-tag">Space</span>
+                </div>
+            </div>
+
+            <!-- Featured Book Section -->
+            <div class="featured-section">
+                <h2 class="section-title">My Current Read</h2>
+                <div class="book-card">
+                    <span class="book-category">Fantasy</span>
+                    <img
+                        src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1586722975i/2767052.jpg"
+                        alt="The Night Circus"
+                        class="book-image"
+                    />
+                    <div class="book-content">
+                        <h3 class="book-title">The Night Circus</h3>
+                        <p class="book-author">By Erin Morgenstern</p>
+                        <div class="book-rating">★★★★★</div>
+                        <p class="book-excerpt">
+                            A magical competition between two illusionists in a
+                            mysterious night circus. The prose is beautiful, and
+                            the world-building is enchanting. I'm totally
+                            immersed in this magical experience!
+                        </p>
+                        <a href="#" class="read-more">Read my thoughts</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book Grid -->
+            <h2 class="section-title">Recently Read</h2>
+            <div class="book-grid">
+                <!-- Book 1 -->
+                <div class="book-card">
+                    <span class="book-category">Sci-Fi</span>
+                    <img
+                        src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653442608i/60710841.jpg"
+                        alt="Project Hail Mary"
+                        class="book-image"
+                    />
+                    <div class="book-content">
+                        <h3 class="book-title">Project Hail Mary</h3>
+                        <p class="book-author">By Andy Weir</p>
+                        <div class="book-rating">★★★★☆</div>
+                        <p class="book-excerpt">
+                            A high-stakes space adventure with fascinating
+                            science concepts. The protagonist's ingenuity and
+                            the friendship that develops throughout the story
+                            are touching.
+                        </p>
+                        <a href="#" class="read-more">Read my thoughts</a>
+                    </div>
+                </div>
+
+                <!-- Book 2 -->
+                <div class="book-card">
+                    <span class="book-category">Tech</span>
+                    <img
+                        src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1544963815i/34964905.jpg"
+                        alt="AI Superpowers"
+                        class="book-image"
+                    />
+                    <div class="book-content">
+                        <h3 class="book-title">AI Superpowers</h3>
+                        <p class="book-author">By Kai-Fu Lee</p>
+                        <div class="book-rating">★★★★☆</div>
+                        <p class="book-excerpt">
+                            An insightful comparison between the AI development
+                            approaches in China and Silicon Valley. The
+                            discussion about the future of work in the age of AI
+                            is thought-provoking.
+                        </p>
+                        <a href="#" class="read-more">Read my thoughts</a>
+                    </div>
+                </div>
+
+                <!-- Book 3 -->
+                <div class="book-card">
+                    <span class="book-category">Romance</span>
+                    <img
+                        src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1471624558i/31349250.jpg"
+                        alt="It Ends with Us"
+                        class="book-image"
+                    />
+                    <div class="book-content">
+                        <h3 class="book-title">It Ends with Us</h3>
+                        <p class="book-author">By Colleen Hoover</p>
+                        <div class="book-rating">★★★★★</div>
+                        <p class="book-excerpt">
+                            A heartbreaking but powerful story about breaking
+                            cycles of abuse. This book made me both laugh and
+                            cry, and I couldn't put it down.
+                        </p>
+                        <a href="#" class="read-more">Read my thoughts</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments-section">
+                <h2>Comments</h2>
+                <div class="comment">
+                    <p class="comment-author">Maria Lima</p>
+                    <p class="comment-date">April 18, 2025</p>
+                    <p>
+                        I loved your review of Project Hail Mary! Have you read
+                        The Martian by the same author?
+                    </p>
+                </div>
+                <div class="comment">
+                    <p class="comment-author">João Silva</p>
+                    <p class="comment-date">April 15, 2025</p>
+                    <p>
+                        I'd recommend Dune if you like space-themed books. It's
+                        a classic!
+                    </p>
+                </div>
+
+                <form class="comment-form">
+                    <h3>Leave a comment</h3>
+                    <textarea
+                        placeholder="Write your comment here..."
+                    ></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <!-- Subscribe Section -->
+            <div class="subscribe-section">
+                <h2>Never Miss a Review</h2>
+                <p>Subscribe to get notified when I post new book reviews!</p>
+                <form class="subscribe-form">
+                    <input
+                        type="email"
+                        placeholder="Your email address"
+                        class="subscribe-input"
+                        required
+                    />
+                    <button type="submit" class="subscribe-button">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
         </main>
 
         <footer>
+            <div class="social-icons">
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-goodreads"></i
+                ></a>
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="#" class="social-icon"
+                    ><i class="fab fa-github"></i
+                ></a>
+            </div>
             <p>Made by Amanda Massarioli © - 2025</p>
         </footer>
+
+        <script>
+            // Simple filter functionality
+            document.querySelectorAll('.filter-tag').forEach(tag => {
+                tag.addEventListener('click', function () {
+                    // Remove active class from all tags
+                    document.querySelectorAll('.filter-tag').forEach(t => {
+                        t.classList.remove('active');
+                    });
+
+                    // Add active class to clicked tag
+                    this.classList.add('active');
+
+                    // Here you would add code to actually filter the books
+                    // This is just a visual demo for now
+                });
+            });
+
+            // Simple search functionality
+            document
+                .querySelector('.search-input')
+                .addEventListener('input', function (e) {
+                    const searchTerm = e.target.value.toLowerCase();
+                    // This is where you would implement actual search functionality
+                    console.log('Searching for:', searchTerm);
+                });
+        </script>
     </body>
 </html>
